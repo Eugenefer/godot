@@ -1,0 +1,9 @@
+res://level.tscn
+res://scenes/level.tscn
+res://scenes/player.tscn
+res://scenes/player.gd
+res://scenes/meteor.tscn
+res://scenes/meteor.gd
+res://scenes/laser.gd
+res://scenes/laser.tscn
+res://scenes/level.gd

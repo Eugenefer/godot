@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfn5d57rivbl1"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_d7sia"]
+[ext_resource type="Texture2D" uid="uid://bqm4rbejooshg" path="res://assets/sprites/others/DurrrSpaceShip.png" id="1_gtor5"]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(49, 0)
+script = ExtResource("1_d7sia")
+
+[node name="PlayerSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gtor5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(6, 0)
+scale = Vector2(0.890625, 1)
+polygon = PackedVector2Array(-16.8421, 33, 2.24561, 33, 34, 26, 15.7193, 10, 6.73684, -32, -20.2105, -32, -30.3158, 10, -48.2807, 25)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-1, -54)
