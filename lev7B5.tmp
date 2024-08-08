@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://danynwdogbotj"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_2omje"]
+[ext_resource type="PackedScene" uid="uid://cxk4wdhc2n1r8" path="res://player.tscn" id="1_dv66d"]
+[ext_resource type="Texture2D" uid="uid://co5tu1x4tnmdv" path="res://sprites/bg/back.png" id="2_034in"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_veo5f"]
+size = Vector2(1149, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfjvl"]
+size = Vector2(1157.5, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y16x"]
+size = Vector2(20, 668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrnol"]
+size = Vector2(20, 671.5)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_2omje")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(241, 23)
+texture = ExtResource("2_034in")
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="top" type="Area2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/top"]
+position = Vector2(584.5, 0)
+shape = SubResource("RectangleShape2D_veo5f")
+
+[node name="bot" type="Area2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/bot"]
+position = Vector2(580.25, 649)
+shape = SubResource("RectangleShape2D_tfjvl")
+
+[node name="left" type="Area2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/left"]
+position = Vector2(0, 324)
+shape = SubResource("RectangleShape2D_5y16x")
+
+[node name="right" type="Area2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/right"]
+position = Vector2(1154, 324.25)
+shape = SubResource("RectangleShape2D_jrnol")
+
+[node name="Player" parent="." instance=ExtResource("1_dv66d")]
+position = Vector2(131, -71)
+
+[node name="Lasers" type="Node2D" parent="."]
+
+[node name="Meteors" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

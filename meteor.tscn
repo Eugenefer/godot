@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3i1qa6112m2v"]
+
+[ext_resource type="Script" path="res://meteor.gd" id="1_3bqdw"]
+[ext_resource type="Texture2D" uid="uid://dvtbxmbx5wc53" path="res://sprites/others/asteroidreal.png" id="1_nvsdr"]
+
+[node name="Meteor" type="Area2D"]
+script = ExtResource("1_3bqdw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nvsdr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(24, -128, 24, -126, 62, -108, 99, -90, 118, -51, 128, -32, 136, -11, 132, 9, 113, 32, 99, 51, 86, 70, 67, 86, 52, 102, 34, 110, -8, 121, -44, 121, -66, 129, -93, 122, -115, 111, -128, 91, -140, 63, -143, 35, -143, 10, -136, -10, -132, -23, -124, -27, -114, -45, -98, -69, -82, -85, -76, -94, -63, -99, -52, -108, -37, -114, 0, -122, 20, -125, 24, -125)
