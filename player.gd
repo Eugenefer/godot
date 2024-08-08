@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 signal laser(pos,rot)
-var speed = 150
+var speed = 350
 var rotation_speed = 3.0
 
 func _process(delta):

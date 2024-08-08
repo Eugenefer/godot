@@ -1,9 +1,10 @@
 extends Area2D
 
-var laserSpeed = 500
+var laserSpeed = 600
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var tween = create_tween()
+	tween.tween_property($Sprite2D, 'scale', Vector2(0.4,0.4), 0.2).from(Vector2(0,0))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

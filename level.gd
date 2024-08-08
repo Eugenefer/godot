@@ -30,7 +30,9 @@ func _on_timer_timeout():
 	var viewportRect = get_viewport().get_visible_rect()
 	var width = viewportRect.size[0]
 	var height = viewportRect.size[1]
-	var direction = (Vector2((width/4)+random.randi_range(0,width/2),(height/4)+random.randi_range(0,height/2)) - position).normalized()
+	var direction = (Vector2((width/4)+random.randi_range(0,width/2),(height/4)+random.randi_range(0,height/2)) - meteorInstance.position).normalized()
+	meteorInstance.rotation = direction.angle()
+	meteorInstance.position += Vector2(cos(rotation), sin(rotation)) * rndSpeed * get_process_delta_time()
 	#position += direction * rndSpeed * delta
 
 

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvtbxmbx5wc53" path="res://sprites/others/asteroidreal.png" id="1_nvsdr"]
 
 [node name="Meteor" type="Area2D"]
+scale = Vector2(0.591835, 0.569411)
 script = ExtResource("1_3bqdw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

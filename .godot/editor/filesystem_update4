@@ -1,8 +1,7 @@
-res://level.tscn
-res://level.gd
 res://player.tscn
-res://laser.tscn
-res://laser.gd
-res://player.gd
-res://meteor.tscn
 res://meteor.gd
+res://level.tscn
+res://laser.tscn
+res://meteor.tscn
+res://player.gd
+res://laser.gd
